@@ -58,9 +58,9 @@ pipeline {
                     withSonarQubeEnv('SonarQube') {
                         sh """
                             ${scannerHome}/bin/sonar-scanner \
-                            -Dsonar.projectKey=GitlabMx \
+                            -Dsonar.projectKey=sonar_peoject \
                             -Dsonar.host.url=http://localhost:9000 \
-                            -Dsonar.login=sqp_5c7cf314cd19d3f60ed624ea584d547820ccd482 \
+                            -Dsonar.login=sqp_782d152b65c36211dc5800d65a5c259efd2b56d0 \
                             -Dsonar.sources=./app \
                             -Dsonar.exclusions="vendor/*,storage/**,bootstrap/cache/*"
                         """
